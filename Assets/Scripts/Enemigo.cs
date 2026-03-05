@@ -32,5 +32,11 @@ public class Enemigo : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent<Vida>(out Vida scriptVida))
+        {
+            scriptVida.RecibirDano(1);
+        }
+    }
 }
