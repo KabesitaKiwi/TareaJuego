@@ -19,9 +19,9 @@ public class Jugador : MonoBehaviour
 
         float vertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(horizontal*velocidad,rb.velocity.y,vertical*velocidad);
+        Vector3 movement = new Vector3(horizontal*velocidad,rb.linearVelocity.y,vertical*velocidad);
 
-        rb.velocity = movement;
+        rb.linearVelocity = movement;
 
 
     }
